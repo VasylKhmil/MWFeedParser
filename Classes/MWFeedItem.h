@@ -57,6 +57,8 @@
 @property (nonatomic, copy) NSString *summary;
 @property (nonatomic, copy) NSString *content;
 @property (nonatomic, copy) NSString *author;
+@property (nonatomic, copy) NSString *category;
 @property (nonatomic, copy) NSArray *enclosures;
+@property (nonatomic, strong) NSString *image;
 
 @end

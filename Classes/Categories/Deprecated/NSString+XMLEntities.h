@@ -1,5 +1,5 @@
 //
-//  MWFeedInfo.h
+//  NSString+XMLEntities.h
 //  MWFeedParser
 //
 //  Copyright (c) 2010 Michael Waterfall
@@ -29,18 +29,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MWFeedInfo : NSObject <NSCoding> {
-	
-	NSString *title; // Feed title
-	NSString *link; // Feed link
-	NSString *summary; // Feed summary / description
-	NSURL *url; // Feed url
-	
-}
+// Import new HTML category
+#import "NSString+HTML.h"
 
-@property (nonatomic, copy) NSString *title;
-@property (nonatomic, copy) NSString *link;
-@property (nonatomic, copy) NSString *summary;
-@property (nonatomic, copy) NSURL *url;
+// THIS CLASS IS DEPRECIATED 03/08/2010
+// REPLACED BY NSString+HTML
+
+@interface NSString (XMLEntities)
+
+// Old Instance Methods
+- (NSString *)stringByDecodingXMLEntities;
+- (NSString *)stringByEncodingXMLEntities;
 
 @end
